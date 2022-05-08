@@ -88,3 +88,12 @@ ORDER BY last_name, first_name;
 SELECT DISTINCT(last_name), COUNT(last_name) AS "Frequency" FROM employees
 GROUP BY last_name
 ORDER BY COUNT(last_name) DESC;
+
+
+--What I was able to analyze from the data:
+
+SELECT EXTRACT(YEAR FROM hire_date), COUNT(EXTRACT(YEAR FROM hire_date)) 
+FROM employees
+GROUP BY EXTRACT(YEAR FROM hire_date)
+ORDER BY EXTRACT(YEAR FROM hire_date);
+
